@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@600&family=Sarabun:ital,wght@0,100;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 2rem;
+}
+
+h2 {
+    font-family: 'Radio Canada', sans-serif;
+}
+
+ul, p {
+    list-style-type: none;
+    font-family: 'Sarabun', sans-serif;
+}
+
+body header nav ul li {
+    background-color: #e980e9;
+    display: inline;
+    text-align: right;
+    border-top: solid 2px #e4c9e6   ;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cabecera__img {
+    background-image: url(../img/centro-desintoxicacion-madrid.jpg);
+    background-size: cover;
+}
+
+footer {
+    background-color: #e980e9;
+}
+
+#opciones a {
+    padding: 20px;
+    margin: 5px;
+    border: hidden;
+}
+
+.boton--sticky { 
+    position: fixed;
+    top: auto;
+    right: 0;
+}
+
+footer section form button {
+    display: inline;
+}
