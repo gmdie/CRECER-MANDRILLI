@@ -37,6 +37,8 @@ a {
 }
 
 .cabecera__img {
+    display: flex;
+    align-items: center;
     background-image: url(../img/centro-desintoxicacion-madrid.jpg);
     background-size: cover;
 }
@@ -45,10 +47,24 @@ footer {
     background-color: #e980e9;
 }
 
+
+
+#opciones {
+    display: flex;
+    flex-direction: column;   
+}
+
 #opciones a {
     padding: 20px;
     margin: 5px;
     border: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#opciones a p {
+    width: auto;
 }
 
 .boton--sticky { 
@@ -59,4 +75,48 @@ footer {
 
 footer section form button {
     display: inline;
+}
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+    "card1 card2 card3"
+    "card4 card5 card6";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+}
+
+#card1 {
+    background-color: rgb(252, 188, 198);
+    grid-area: card1;
+    justify-items: center;
+}
+#card2 {
+    background-color: rgb(252, 188, 198);
+    grid-area: card2;
+    justify-items: center;
+}
+#card3 {
+    background-color: rgb(252, 188, 198);
+    grid-area: card3;
+}
+#card4 {
+    background-color: rgb(252, 188, 198);
+    grid-area: card4;
+}
+#card5 {
+    background-color: rgb(252, 188, 198);
+    grid-area: card5;
+}
+#card6 {
+    background-color: rgb(252, 188, 198);
+    grid-area: card6;
+}
+
+@media  screen and (min-width: 761px) {
+    #grilla {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
