@@ -19,43 +19,54 @@ ul, p {
 }
 
 body header nav ul li {
-    background-color: #e980e9;
     display: inline;
     text-align: right;
-    border-top: solid 2px #e4c9e6   ;
+    border-bottom: solid 2px #000000;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
-    justify-content: end;
     align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 10px;
 }
 
 a {
     text-decoration: none;
 }
 
-.cabecera__img {
+.cabecera {
     display: flex;
     align-items: center;
-    background-image: url(../img/centro-desintoxicacion-madrid.jpg);
+    justify-content: space-between;
+    background-color: #ecb2ec;
+    /* background-image: url(../img/centro-desintoxicacion-madrid.jpg); */
     background-size: cover;
+    height: 50px;
 }
 
 footer {
     background-color: #e980e9;
 }
 
-
-
-#opciones {
-    display: flex;
-    flex-direction: column;   
+.nuestra-mision {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
 }
 
-#opciones a {
-    padding: 20px;
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;   
+    margin: 0 auto;
+}
+
+.opciones a {
+    padding: 10px;
     margin: 5px;
     border: hidden;
     display: flex;
@@ -63,7 +74,7 @@ footer {
     align-items: center;
 }
 
-#opciones a p {
+.opciones a p {
     width: auto;
 }
 
@@ -77,7 +88,7 @@ footer section form button {
     display: inline;
 }
 
-#grilla {
+.grilla {
     display: grid;
     grid-template-areas:
     "card1 card2 card3"
@@ -90,7 +101,7 @@ footer section form button {
 #card1 {
     background-color: rgb(252, 188, 198);
     grid-area: card1;
-    justify-items: center;
+    align-items: center;
 }
 #card2 {
     background-color: rgb(252, 188, 198);
@@ -114,9 +125,35 @@ footer section form button {
     grid-area: card6;
 }
 
-@media  screen and (min-width: 761px) {
-    #grilla {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+/* MEDIA QUERIS */
+
+@media screen and (max-width: 680px) {
+    .cabecera {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .grilla {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1/6fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6";
+    }
+}
+@media screen and (max-width: 700px) {
+    .opciones a {
+        padding: 10px;
+        margin: 5px;
+        border: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
