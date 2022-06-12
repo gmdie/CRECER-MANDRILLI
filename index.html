@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRECER</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <header class="cabecera"><!--Cabecera con logo y menu de navegación-->
-        <img src="./img/CRECER1.png" alt="Logo del instituto"><!--aca va la imagen del logo-->
+        <img class="logo" src="./img/CRECER1.png" alt="Logo del instituto"><!--aca va la imagen del logo-->
         <nav>
             <ul>
                 <li>
@@ -33,7 +37,7 @@
     <form action="https://wa.me/542612161026">
         <button type="submit" class="boton--sticky"><img src="./img/logo whatsapp.png" alt="icono whatsapp" width="30px" height="30px"></button>
     </form>
-    <section class="nuestra-mision"><!--SECCIÓN "NUESTRA MISIÓN"-->
+    <section class="nuestraMision"><!--SECCIÓN "NUESTRA MISIÓN"-->
         <p>NUESTRA MISIÓN es trabajar de manera integral las distintas problemáticas y trastornos, ya sean, del habla, del lenguaje, aprendizaje, visuales, emocionales, etc.
             Trabajamos con personas de todas las edades (niños, adolescentes y adultos).
             Contamos con un abordaje multidisciplinario para lograr los objetivos que nos proponemos entre padres, tutores, profesionales y niños: psicología, psicopedagogía, fonoaudiología, terapia visual, terapia del lenguaje, psicomotricidad y apoyo escolar, son algunas de las areas en las que nos desempeñamos con total profesionalismo y experencia.
@@ -41,19 +45,19 @@
 
     </section>
     <section class="opciones"><!--SECCIÓN "OPCIONES"-->
-        <a href="./pages/terapias.html" id="terapias">
+        <a class="animate__animated animate__slideInLeft" href="./pages/terapias.html" id="terapias">
             <p class="textoIzquierdo">TERAPIAS Y TALLERES: Informate todos los tratamiento y tarapias que realizamos en CRECER y que pueden ayudarte en lo que necesitas. Realizamos talleres periodicamente con temas de actualidad de gran interés para toda la comunidad</p>
             <img src="./img/terapeuta ocupacional.jpg" width="250" height="250" alt="Imágen de terapeuta ocupacional jugando con un chico">
         </a>
-        <a href="./pages/nosotros.html" id="nosotros">
+        <a class="animate__animated animate__slideInRight" href="./pages/nosotros.html" id="nosotros">
             <img src="./img/grupo de trabajo medico.jpg" width="250" height="250" alt="Imágen de un grupo de médicos">
             <p class="textoDerecha">NOSOTROS: Conocé quienes formamos parte de CRECER y un poco de nuestra vida...</p>
         </a>        
-        <a href="./pages/contacto.html" id="contacto">
+        <a class="animate__animated animate__slideInLeft" href="./pages/contacto.html" id="contacto">
             <p class="textoIzquierdo">RESERVA UNA CITA: Dejanos tu consulta para que podamos ponernos en contacto y concretar una entrevista</p>
             <img src="./img/appointment.jfif" width="250" height="250" alt="Imágen de una lapicera marcando una fecha en un calendario">
         </a>        
-        <a href="./pages/obras_sociales.html" id="obrassociales">
+        <a class="animate__animated animate__slideInRight" href="./pages/obras_sociales.html" id="obrassociales">
             <img src="./img/obras sociales.jpg" width="250" height="250" alt="Imágen de una mujer entregando el carnet de la obra social a otra mujer">
             <p class="textoDerecha">OBRAS SOCIALES: Conocé las Obras Sociales con las que tenemos convenio</p>
         </a>
@@ -63,10 +67,10 @@
     </section>
     <footer>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6696.746018124404!2d-68.840017!3d-32.94116!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2d11cff72b89c10c!2sCRECER%20Centro%20Terapeutico!5e0!3m2!1ses!2sar!4v1652599106274!5m2!1ses!2sar" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <section><!--footer del footer-->
-            <p>Dirección: Portugal 1300, esquina Caseros. Godoy Cruz, Mendoza</p>
-            <p>Teléfono: 4525701 - +54 261 152161026</p>
-            <p>Email: infocrecermza@gmail.com</p>
+        <section class="footer"><!--footer del footer-->
+            <p>Dirección: Portugal 1300, esquina Caseros. Godoy Cruz, Mendoza<br>
+            Teléfono: 4525701 - +54 261 152161026<br>
+            Email: infocrecermza@gmail.com</p>
             <ul>
                 <li>Lunes - 09:00 a 20:00</li>
                 <li>Martes - 09:00 a 20:00</li>
@@ -74,19 +78,20 @@
                 <li>Jueves - 09:00 a 20:00</li>
                 <li>Viernes - 09:00 a 20:00</li>
             </ul>
-            <form action="https://www.instagram.com/crecercentroterapeutico/?hl=es">
-                <button type="submit"><img src="./img/logo instagram.png" alt="icono instagram" width="30px" height="30px"></button>
-            </form>
-            <form action="https://es-la.facebook.com/crecercentroterapeutico/">
-                <button type="submit"><img src="./img/logo facebook.png" alt="icono facebook" width="30px" height="30px"></button>
-            </form>
-            <form action="https://wa.me/542612161026">
-                <button type="submit"><img src="./img/logo whatsapp.png" alt="icono whatsapp" width="30px" height="30px"></button>
-            </form>
-            <ul>
-                <li><a href="./pages/contacto.html">Contactanos</a></li>
-            </ul>
-
+            <div class="redesSociales">
+                <form class="botonRedes" action="https://www.instagram.com/crecercentroterapeutico/?hl=es">
+                    <button type="submit"><img src="./img/logo instagram.png" alt="icono instagram" width="30px" height="30px"></button>
+                </form>
+                <form class="botonRedes" action="https://es-la.facebook.com/crecercentroterapeutico/">
+                    <button type="submit"><img src="./img/logo facebook.png" alt="icono facebook" width="30px" height="30px"></button>
+                </form>
+                <form class="botonRedes" action="https://wa.me/542612161026">
+                    <button type="submit"><img src="./img/logo whatsapp.png" alt="icono whatsapp" width="30px" height="30px"></button>
+                </form>
+                <ul>
+                    <li><a href="./pages/contacto.html">Contactanos</a></li>
+                </ul>
+            </div>
         </section>
     </footer>
 </body>

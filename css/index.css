@@ -22,6 +22,7 @@ body header nav ul li {
     display: inline;
     text-align: right;
     border-bottom: solid 2px #000000;
+    padding: 5px;
 }
 
 nav ul {
@@ -42,16 +43,30 @@ a {
     align-items: center;
     justify-content: space-between;
     background-color: #ecb2ec;
-    /* background-image: url(../img/centro-desintoxicacion-madrid.jpg); */
     background-size: cover;
     height: 50px;
 }
 
-footer {
-    background-color: #e980e9;
+.logo {
+    max-width: 30%;
 }
 
-.nuestra-mision {
+.footer {
+    background-image: linear-gradient(#c647e2, #e883ff);
+    display: flex;
+    justify-content: space-around;
+}
+
+.redesSociales {
+    display: flex;
+    justify-content: end;
+}
+
+.botonRedes {
+    display: inline;
+}
+
+.nuestraMision {
     max-width: 80%;
     margin: 0 auto;
     padding: 10px;
@@ -127,10 +142,12 @@ footer section form button {
 
 /* MEDIA QUERIS */
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 608px) {
     .cabecera {
         display: flex;
         flex-direction: column;
+        height: 100px;
+        background-color: #ecb2ec;
     }
 }
 
@@ -156,4 +173,12 @@ footer section form button {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* ANIMACIONES */
+
+@keyframes aparece {
+    0s {transform: scale(0);}
+    10s {transform: scale(.5);}
+    20s {transform: scale(1)} 
 }
