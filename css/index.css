@@ -103,6 +103,17 @@ footer section form button {
     display: inline;
 }
 
+.tituloh1 {
+    display: flex;
+    justify-content: center;
+}
+
+.formContacto {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
 .grilla {
     display: grid;
     grid-template-areas:
@@ -146,7 +157,7 @@ footer section form button {
     .cabecera {
         display: flex;
         flex-direction: column;
-        height: 100px;
+        height: 40vh;
         background-color: #ecb2ec;
     }
 }

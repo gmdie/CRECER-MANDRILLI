@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACTO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
@@ -35,7 +36,7 @@
     </form>
     <h1>ESTAMOS EN CONTACTO</h1>
     <p>Dejanos tus datos y tu consulta para que podamos comunicarnos con vos y programar la primera entrevista con el/la profesional que desees:</p>
-    <form action="../indexjavscript.html" method="post" enctype="application/x-www-form-urlencoded">
+    <form class="formContacto w-75" action="../indexjavscript.html" method="post" enctype="application/x-www-form-urlencoded">
         <input type="text" name="nombre" placeholder="Nombre">
         <br>
         <input type="text" name="apellido" placeholder="Apellido">
@@ -45,12 +46,12 @@
         <input type="email" name="email" placeholder="Email">
         <br>
         <label for="cud">¿Posee CUD (Certificado Único de Discapacidad)?</label>
-        <input type="checkbox" name="CUD"><!--posee obra social?-->
+        <input type="checkbox" name="CUD">
         <br> 
         <label for="nombre_os">¿Posee Obra Social?</label>
-        <input type="checkbox" name="os"><!--posee obra social?-->
+        <input type="checkbox" name="os">
         <br>        
-        <select name="nombre_os"><!--cual?-->
+        <select name="nombre_os">
             <option value="osep">OSEP</option>
             <option value="osde">OSDE</option>
             <option value="ospe">OSPE</option>
@@ -58,7 +59,7 @@
             <option value="otra">OTRA</option>
         </select>
         <br>
-        <textarea name="consulta" cols="30" rows="10" placeholder="Escriba aqui su consulta"></textarea><!--consulta-->
+        <textarea name="consulta" cols="30" rows="10" placeholder="Escriba aqui su consulta"></textarea>
         <br>
         <button type="submit">📧Enviar</button>
     </form>
@@ -91,5 +92,6 @@
             </div>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
