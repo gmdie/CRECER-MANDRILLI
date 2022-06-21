@@ -7,6 +7,7 @@
 
 header {
     padding: 2rem;
+    position: relative;
 }
 
 h2 {
@@ -42,11 +43,9 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ecb2ec;
-    background-size: cover;
-    height: 50px;
-}
-
+    height: 35vh;
+    }
+    
 .logo {
     max-width: 30%;
 }
@@ -93,6 +92,10 @@ a {
     width: auto;
 }
 
+.terapias .opciones {
+    justify-content: space-between;
+}
+
 .boton--sticky { 
     position: fixed;
     top: auto;
@@ -103,7 +106,20 @@ footer section form button {
     display: inline;
 }
 
+.hamburger, #hamburger {
+    display: none;
+}
+
+#hamburger {
+    position: absolute;
+    top: 226px;
+    width: 40px;
+    height: 33px;
+    opacity: 0;
+}
+
 .grilla {
+    margin: 10px;
     display: grid;
     grid-template-areas:
     "card1 card2 card3"
@@ -114,30 +130,76 @@ footer section form button {
 }
 
 #card1 {
-    background-color: rgb(252, 188, 198);
     grid-area: card1;
     align-items: center;
+    justify-content: center;
+    padding: 50px;
 }
 #card2 {
-    background-color: rgb(252, 188, 198);
     grid-area: card2;
-    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
 }
 #card3 {
-    background-color: rgb(252, 188, 198);
     grid-area: card3;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
 }
 #card4 {
-    background-color: rgb(252, 188, 198);
     grid-area: card4;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
 }
 #card5 {
-    background-color: rgb(252, 188, 198);
     grid-area: card5;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
 }
 #card6 {
-    background-color: rgb(252, 188, 198);
     grid-area: card6;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+#card1:hover {
+    font-size: large;
+    transition: font-size 1s;
+}
+
+#card2:hover {
+    font-size: large;
+    transition: font-size 1s;
+}
+
+#card3:hover {
+    font-size: large;
+    transition: font-size 1s;
+}
+
+#card4:hover {
+    font-size: large;
+    transition: font-size 1s;
+}
+
+#card5:hover {
+    font-size: large;
+    transition: font-size 1s;
+}
+
+#card6:hover {
+    font-size: large;
+    transition: font-size 1s;
+}
+
+.formularioContacto {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
 
 /* MEDIA QUERIS */
@@ -146,14 +208,23 @@ footer section form button {
     .cabecera {
         display: flex;
         flex-direction: column;
-        height: 100px;
-        background-color: #ecb2ec;
+        height: 35vh;
+    }
+    .hamburger, #hamburger {
+        display: block;
+    }
+
+    #hamburger:checked ~ .menu {
+        display: block;
+    }
+    .menu {
+        display: none;
     }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 680px) {
     .grilla {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1/3fr;
         grid-template-rows: 1/6fr;
         grid-template-areas:
             "card1"
@@ -164,6 +235,42 @@ footer section form button {
             "card6";
     }
 }
+
+@media screen and (max-width: 320px) {
+    .grilla {
+        grid-template-columns: 1/3fr;
+        grid-template-rows: 1/6fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6";
+    }
+}
+
+@media screen and (min-width: 681px) {
+    .grilla {
+        grid-template-columns: 2/3fr;
+        grid-template-rows: 1/3fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6";
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .grilla {
+        grid-template-columns: 3fr;
+        grid-template-rows: 1/2fr;
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6";
+    }
+}
+
 @media screen and (max-width: 700px) {
     .opciones a {
         padding: 10px;
@@ -175,10 +282,13 @@ footer section form button {
     }
 }
 
-/* ANIMACIONES */
 
-@keyframes aparece {
-    0s {transform: scale(0);}
-    10s {transform: scale(.5);}
-    20s {transform: scale(1)} 
+@media screen and (max-width: 320px) {
+    .logo {
+        max-width: 100%;
+    }
 }
+
+
+
+

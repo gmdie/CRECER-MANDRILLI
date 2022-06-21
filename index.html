@@ -9,12 +9,19 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+    <link rel="stylesheet" href="./css/hamburguer.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <header class="cabecera"><!--Cabecera con logo y menu de navegación-->
         <img class="logo" src="./img/CRECER1.png" alt="Logo del instituto"><!--aca va la imagen del logo-->
-        <nav>
+        <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <input type="checkbox" name="hamburger" id="hamburger">
+        <nav class="menu">
             <ul>
                 <li>
                     <a href="./index.html">Home</a>

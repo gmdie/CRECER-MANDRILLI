@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OBRAS SOCIALES</title>
+    <link rel="stylesheet" href="../css/hamburguer.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <header class="cabecera"><!--Cabecera con logo y menu de navegación-->
-        <img src="../img/CRECER1.png" alt="Logo del instituto"><!--aca va la imagen del logo-->
-        <nav>
+        <img class="logo" src="../img/CRECER1.png" alt="Logo del instituto"><!--aca va la imagen del logo-->
+        <button class="hamburger hamburger--spin" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <input type="checkbox" name="hamburger" id="hamburger">
+        <nav class="menu">
             <ul>
                 <li>
                     <a href="../index.html">Home</a>
