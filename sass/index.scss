@@ -6,22 +6,28 @@
     padding: 0;
 }
 
+@mixin gpm($gap, $padding, $margin) {
+    gap: $gap;
+    padding: $padding;
+    margin: $margin;
+}
+
 header {
     padding: 2rem;
     position: relative;
 }
 
 h2 {
-    font-family: $font-ppal;
+    font-family: map-get($fontfamily, $font-ppal);
 }
 
 ul, p {
     list-style-type: none;
-    font-family: $font-text;
+    font-family: map-get($fontfamily, $font-text);
 }
 
 body header nav ul li {
-    display: inline;
+    @extend .botonRedes;
     text-align: right;
     border-bottom: solid 2px #000000;
     padding: 5px;
@@ -32,8 +38,9 @@ nav ul {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    gap: 10px;
-    margin: 10px;
+    @include gpm(10px, 0, 10px);
+    // gap: 10px;
+    // margin: 10px;
 }
 
 a {
@@ -68,8 +75,9 @@ a {
 
 .nuestraMision {
     max-width: 80%;
-    margin: 0 auto;
-    padding: 10px;
+    // margin: 0 auto;
+    // padding: 10px;
+    @include gpm(0, 10px, 0 auto);
 }
 
 
@@ -80,23 +88,19 @@ a {
     margin: 0 auto;
 
     a {
-        padding: 10px;
-        margin: 5px;
+        // padding: 10px;
+        // margin: 5px;
+        @include gpm(0, 10px, 5px);
         border: hidden;
         display: flex;
         flex-direction: row;
         align-items: center;
         p {
             width: auto;
-            // color: $text-color
         }
     }
     
 }
-
-.opciones 
-
-.opciones a 
 
 .terapias .opciones {
     justify-content: space-between;
@@ -125,51 +129,64 @@ footer section form button {
 }
 
 .grilla {
-    margin: 10px;
+    // margin: 10px;
     display: grid;
     grid-template-areas:
     "card1 card2 card3"
     "card4 card5 card6";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 2px;
+    // gap: 2px;
+    @include gpm(2px, 0, 10px);
+}
+
+@mixin cards ($alg, $jus, $pad) {
+    align-items: $alg;
+    justify-content: $jus;
+    padding: $pad;    
 }
 
 #card1 {
     grid-area: card1;
-    align-items: center;
-    justify-content: center;
-    padding: $card-padding;
+    // align-items: center;
+    // justify-content: center;
+    // padding: $card-padding;
+    @include cards (center, center, $card-padding);
 }
 #card2 {
     grid-area: card2;
-    align-items: center;
-    justify-content: center;
-    padding: $card-padding;
+    // align-items: center;
+    // justify-content: center;
+    // padding: $card-padding;
+    @include cards (center, center, $card-padding);
 }
 #card3 {
     grid-area: card3;
-    align-items: center;
-    justify-content: center;
-    padding: $card-padding;
+    // align-items: center;
+    // justify-content: center;
+    // padding: $card-padding;
+    @include cards (center, center, $card-padding);
 }
 #card4 {
     grid-area: card4;
-    align-items: center;
-    justify-content: center;
-    padding: $card-padding;
+    // align-items: center;
+    // justify-content: center;
+    // padding: $card-padding;
+    @include cards (center, center, $card-padding);
 }
 #card5 {
     grid-area: card5;
-    align-items: center;
-    justify-content: center;
-    padding: $card-padding;
+    // align-items: center;
+    // justify-content: center;
+    // padding: $card-padding;
+    @include cards (center, center, $card-padding);
 }
 #card6 {
     grid-area: card6;
-    align-items: center;
-    justify-content: center;
-    padding: $card-padding;
+    // align-items: center;
+    // justify-content: center;
+    // padding: $card-padding;
+    @include cards (center, center, $card-padding);
 }
 
 #card1:hover {
