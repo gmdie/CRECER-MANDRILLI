@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@600&family=Sarabun:ital,wght@0,100;1,100&display=swap");
 * {
   margin: 0;
   padding: 0; }
@@ -6,8 +7,12 @@ header {
   padding: 2rem;
   position: relative; }
 
+h2, .titulo {
+  font-family: "Radio Canada", sans-serif; }
+
 ul, p {
-  list-style-type: none; }
+  list-style-type: none;
+  font-family: "Sarabun", sans-serif; }
 
 body header nav ul li {
   text-align: right;
@@ -26,7 +31,19 @@ nav ul {
 a {
   text-decoration: none; }
 
+.centrado {
+  display: flex;
+  display: block;
+  margin: 0 auto; }
+
+.separador {
+  background-image: url(../img/fondotitulo.png);
+  height: 5px;
+  max-width: 70%;
+  margin: 0 auto; }
+
 .cabecera {
+  background-image: url(../img/wavedown.png);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,14 +52,23 @@ a {
 .logo {
   max-width: 30%; }
 
-.footer {
-  background-image: linear-gradient(#c647e2, #e883ff);
+.titulo {
   display: flex;
-  justify-content: space-around; }
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/fondotitulo.png);
+  height: 15vh; }
+
+.footer {
+  background-image: url(../img/waveup.png);
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
 
 .redesSociales {
   display: flex;
-  justify-content: end; }
+  justify-content: end;
+  align-items: center; }
 
 .botonRedes, body header nav ul li {
   display: inline; }
@@ -51,7 +77,8 @@ a {
   max-width: 80%;
   gap: 0;
   padding: 10px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-size: large; }
 
 .opciones {
   display: flex;
@@ -69,6 +96,15 @@ a {
     .opciones a p {
       width: auto; }
 
+.textoIzquierdo, .textoDerecha {
+  font-size: large; }
+
+.prof {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+  align-items: center; }
+
 .terapias .opciones {
   justify-content: space-between; }
 
@@ -85,10 +121,50 @@ footer section form button {
 
 #hamburger {
   position: absolute;
-  top: 226px;
+  top: 210px;
   width: 40px;
   height: 33px;
   opacity: 0; }
+
+.obrasSociales {
+  display: grid;
+  grid-template-areas: "os1 os2"  "os3 os4" "os5 os6";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5px;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 70%; }
+
+.os1 {
+  width: 450px;
+  height: 150px;
+  grid-area: os1; }
+
+.os2 {
+  width: 450px;
+  height: 150px;
+  grid-area: os2; }
+
+.os3 {
+  width: 450px;
+  height: 150px;
+  grid-area: os3; }
+
+.os4 {
+  width: 450px;
+  height: 150px;
+  grid-area: os4; }
+
+.os5 {
+  width: 450px;
+  height: 150px;
+  grid-area: os5; }
+
+.os6 {
+  width: 450px;
+  height: 150px;
+  grid-area: os6; }
 
 .grilla {
   display: grid;
@@ -97,45 +173,33 @@ footer section form button {
   grid-template-rows: 1fr 1fr;
   gap: 2px;
   padding: 0;
-  margin: 10px; }
+  margin: 20px;
+  max-width: 70%;
+  margin: 0 auto; }
 
-#card1 {
+#card1, #card2, #card3, #card4, #card5, #card6 {
   grid-area: card1;
+  background-image: linear-gradient(45deg, #64c2b867, #ffffff9f);
   align-items: center;
   justify-content: center;
   padding: 50px; }
 
 #card2 {
-  grid-area: card2;
-  align-items: center;
-  justify-content: center;
-  padding: 50px; }
+  grid-area: card2; }
 
 #card3 {
-  grid-area: card3;
-  align-items: center;
-  justify-content: center;
-  padding: 50px; }
+  grid-area: card3; }
 
 #card4 {
-  grid-area: card4;
-  align-items: center;
-  justify-content: center;
-  padding: 50px; }
+  grid-area: card4; }
 
 #card5 {
-  grid-area: card5;
-  align-items: center;
-  justify-content: center;
-  padding: 50px; }
+  grid-area: card5; }
 
 #card6 {
-  grid-area: card6;
-  align-items: center;
-  justify-content: center;
-  padding: 50px; }
+  grid-area: card6; }
 
-#card1:hover {
+#card1:hover, #card2:hover, #card3:hover, #card4:hover, #card5:hover, #card6:hover {
   font-size: large;
   transition: font-size 1s; }
 
@@ -171,7 +235,9 @@ footer section form button {
     flex-direction: column;
     height: 35vh; }
   .hamburger, #hamburger {
-    display: block; }
+    display: block;
+    position: absolute;
+    top: 210px; }
   #hamburger:checked ~ .menu {
     display: block; }
   .menu {
@@ -185,9 +251,53 @@ footer section form button {
 
 @media screen and (max-width: 320px) {
   .grilla {
+    justify-content: center;
     grid-template-columns: 1/3fr;
     grid-template-rows: 1/6fr;
-    grid-template-areas: "card1" "card2" "card3" "card4" "card5" "card6"; } }
+    grid-template-areas: "card1" "card2" "card3" "card4" "card5" "card6"; }
+  footer section p, ul {
+    display: none; }
+  .nuestraMision, .textoIzquierdo, .textoDerecha {
+    font-size: small; }
+  .terapeutas a .prof {
+    display: block;
+    flex-direction: row; }
+  body div img {
+    width: 320px;
+    height: 250px; }
+  .obrasSociales {
+    display: grid;
+    grid-template-areas: "os1" "os2" "os3"  "os4" "os5" "os6";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 70%; }
+  .os1 {
+    width: 200px;
+    height: 50px;
+    grid-area: os1; }
+  .os2 {
+    width: 200px;
+    height: 50px;
+    grid-area: os2; }
+  .os3 {
+    width: 200px;
+    height: 50px;
+    grid-area: os3; }
+  .os4 {
+    width: 200px;
+    height: 50px;
+    grid-area: os4; }
+  .os5 {
+    width: 200px;
+    height: 50px;
+    grid-area: os5; }
+  .os6 {
+    width: 200px;
+    height: 50px;
+    grid-area: os6; } }
 
 @media screen and (min-width: 681px) {
   .grilla {
