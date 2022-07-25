@@ -40,21 +40,21 @@
         </nav>
     </header>
     <form action="https://wa.me/542612161026">
-        <button type="submit" class="boton--sticky"><img src="../img/logo whatsapp.png" alt="icono whatsapp" width="30px" height="30px"></button>
+        <button type="submit" class="boton--sticky"><img src="../img/whatsapp.png" alt="icono whatsapp" width="30px" height="30px"></button>
     </form>
     <div class="titulo">
         <h1>ESTAMOS EN CONTACTO</h1>
     </div>
-    <p>Dejanos tus datos y tu consulta para que podamos comunicarnos con vos y programar la primera entrevista con el/la profesional que desees:</p>
+    <p class="separado">Dejanos tus datos y tu consulta para que podamos comunicarnos con vos y programar la primera entrevista con el/la profesional que desees:</p>
     <div class="formularioContacto">
         <form action="../indexjavscript.html" method="post" enctype="application/x-www-form-urlencoded">
-            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="nombre" placeholder="Nombre" class="campoContacto">
             <br>
-            <input type="text" name="apellido" placeholder="Apellido">
+            <input type="text" name="apellido" placeholder="Apellido" class="campoContacto">
             <br>
-            <input type="tel" name="teléfono" placeholder="Teléfono">
+            <input type="tel" name="teléfono" placeholder="Teléfono" class="campoContacto">
             <br>
-            <input type="email" name="email" placeholder="Email">
+            <input type="email" name="email" placeholder="Email" class="campoContacto">
             <br>
             <label for="cud">¿Posee CUD (Certificado Único de Discapacidad)?</label>
             <input type="checkbox" name="CUD"><!--posee obra social?-->
@@ -70,9 +70,9 @@
                 <option value="otra">OTRA</option>
             </select>
             <br>
-            <textarea name="consulta" cols="30" rows="10" placeholder="Escriba aqui su consulta"></textarea><!--consulta-->
+            <textarea name="consulta" cols="30" rows="10" class="campoConsulta" placeholder="Escriba aqui su consulta"></textarea><!--consulta-->
             <br>
-            <button type="submit">📧Enviar</button>
+            <button type="submit" class="campoEnviar">📧Enviar</button>
         </form>
     </div>
    
@@ -91,13 +91,13 @@
             </ul>
             <div class="redesSociales">
                 <form class="botonRedes" action="https://www.instagram.com/crecercentroterapeutico/?hl=es">
-                    <button type="submit"><img src="../img/logo instagram.png" alt="icono instagram" width="30px" height="30px"></button>
+                    <button type="submit"><img src="../img/logotipo-de-instagram.png" alt="icono instagram" width="30px" height="30px"></button>
                 </form>
                 <form class="botonRedes" action="https://es-la.facebook.com/crecercentroterapeutico/">
-                    <button type="submit"><img src="../img/logo facebook.png" alt="icono facebook" width="30px" height="30px"></button>
+                    <button type="submit"><img src="../img/facebook.png" alt="icono facebook" width="30px" height="30px"></button>
                 </form>
                 <form class="botonRedes" action="https://wa.me/542612161026">
-                    <button type="submit"><img src="../img/logo whatsapp.png" alt="icono whatsapp" width="30px" height="30px"></button>
+                    <button type="submit"><img src="../img/whatsapp.png" alt="icono whatsapp" width="30px" height="30px"></button>
                 </form>
                 <ul>
                     <li><a href="./pages/contacto.html">Contactanos</a></li>

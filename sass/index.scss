@@ -49,7 +49,7 @@ a {
 .centrado {
     display: flex;
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .separador {
@@ -102,6 +102,7 @@ a {
     max-width: 80%;
     @include gpm(0, 10px, 0 auto);
     font-size: large;
+    background-image: url(/img/centro-desintoxicacion-madrid.jpg);
 }
 
 
@@ -131,7 +132,7 @@ a {
 .prof {
     display: flex;
     max-width: 80%;   
-    margin: 0 auto;
+    margin: 20px auto;
     align-items: center;
 }
 
@@ -226,7 +227,6 @@ footer section form button {
 
 #card1 {
     grid-area: card1;
-    background-image: linear-gradient(45deg, #64c2b867, #ffffff9f);
     @include cards (center, center, $card-padding);
 }
 #card2 {
@@ -251,39 +251,88 @@ footer section form button {
 }
 
 #card1:hover {
-    font-size: large;
-    transition: font-size 1s;
+    background-color: #a1a1a141;
+    transition: background-color 2s; 
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #card2:hover {
-    font-size: large;
-    transition: font-size 1s;
+    background-color: #a1a1a141;
+    transition: background-color 1s; 
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #card3:hover {
-    font-size: large;
-    transition: font-size 1s;
+    background-color: #a1a1a141;
+    transition: background-color 1s; 
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #card4:hover {
-    font-size: large;
-    transition: font-size 1s;
+    background-color: #a1a1a141;
+    transition: background-color 1s; 
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #card5:hover {
-    font-size: large;
-    transition: font-size 1s;
+    background-color: #a1a1a141;
+    transition: background-color 1s; 
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #card6:hover {
-    font-size: large;
-    transition: font-size 1s;
+    background-color: #a1a1a141;
+    transition: background-color 1s; 
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .formularioContacto {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 50px;
+}
+
+.campoContacto {
+    background-color: #1bbf96;
+    width: 300px;
+    height: 30px;
+    margin: 5px;
+}
+
+.campoConsulta {
+    background-color: #1bbf96;
+    width: 300px;
+    margin: 5px;
+}
+
+.campoEnviar {
+    width: 200px;
+}
+
+.separado {
+    margin: 15px auto;
+    max-width: 70%;
+}
+
+.separado2 {
+    margin: 45px auto;
+    max-width: 70%;
+}
+
+.terapeutas {
+    padding: 20px;
 }
 
 /* MEDIA QUERIS */
@@ -303,7 +352,12 @@ footer section form button {
     #hamburger:checked ~ .menu {
         display: block;
     }
+
     .menu {
+        display: none;
+    }
+    
+    .fotochicas {
         display: none;
     }
 }
@@ -335,9 +389,7 @@ footer section form button {
             "card5"
             "card6";
     }
-    footer section p, ul {
-        display: none
-    }
+    
     .nuestraMision, .textoIzquierdo, .textoDerecha {
         font-size: small;
     }    
@@ -404,6 +456,12 @@ footer section form button {
             "card1 card2"
             "card3 card4"
             "card5 card6";
+    }
+}
+
+@media screen and (max-width: 730px) {
+    footer section p, ul, .redesSociales {
+        display: none
     }
 }
 
